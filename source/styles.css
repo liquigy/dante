@@ -1,0 +1,133 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+@font-face {
+    font-family: 'Abrilfatface';
+    src: url('./fonts/AbrilFatface-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather-Light.ttf');
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./fonts/WorkSans-VariableFont_wght.ttf');
+}
+body {
+    background-repeat: repeat;
+    background-image: url(./source/tile6.png);
+    color: beige;
+}
+  
+
+.banner {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(228, 213, 213, 0.6);
+    background-image: url('./source/coffee2.jpeg');
+    background-size: 1200px;
+}
+h1 {
+    font-family: 'Abrilfatface', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    background-color: rgba(53, 49, 49, 0.8);
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+h2 {
+    font-family: 'WorkSans', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    background-color: rgba(87, 72, 72, 0.8);
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+table {
+    background-color: #333;
+    margin: 20px;
+    width: 96%;
+    
+}
+th {
+    background-color: #000;
+}
+td {
+    font-family: 'Merriweather', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.pattern1 {
+    background-color: #4A4A4A;
+    border-color: #000;
+}
+.pattern2 {
+    background-color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+main {
+    position: relative;
+    top: 600px;
+    width: 100%;
+}
+footer div {
+    position: relative;
+    background-color: #393636;
+    height: 100px;
+    top: 600px;
+    width: 100%;
+}
+nav {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background-color: #393636;
+    width: 100%;
+    padding: 10px;
+}
+nav li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0px;
+    border: 0px;
+    margin-bottom: 5px;
+    background-color: #565050;
+}
+nav a {
+    font-family: 'WorkSans', Courier, monospace;
+    color: rgb(255, 255, 255);
+}
+nav li:hover {
+    color: rgb(0, 0, 0);
+    background-color: beige;
+}
+nav a:hover {
+    color: rgb(0, 0, 0);
+}
+nav .highlight {
+    background-color: aliceblue;
+    color: #000 !important;
+    border-radius: 10px;
+}
+.highlight a {
+    color: #000 !important;
+}
+.code {
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    background-color: #717171;
+}
