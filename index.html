@@ -1,9 +1,713 @@
+<!DOCTYPE html>
 <html>
-
+<head>
+  <title>HTML and CSS Cheatsheets</title>
+  <link href="./styles.css" type="text/css" rel="stylesheet">
+</head>
 <body>
-  <h1>Dante Vigilante</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+    <header>
+        
+        <div class="banner">
+            <h1>HTML and CSS Cheatsheets</h1> 
+        </div>
+        <nav><h1>HTML and CSS Cheatsheets</h1>
+            <ul>
+                <li class="highlight"><a href="#html" >HTML</a></li>
+                <li><a href="#htmlfundamentals" >HTML Fundamentals</a></li>
+                <li><a href="#tables" >HTML Tables and attributes</a></li>
+                <li><a href="#semantic" >HTML Semantic</a></li>
+            </ul>
+            <ul>
+                <li class="highlight"><a href="#css" >CSS</a></li>
+                <li><a href="#cssfundamentals" >CSS Fundamentals</a></li>
+                <li><a href="#boxmodel" >CSS Box Model</a></li>
+                <li><a href="#display" >CSS Display and Positioning</a></li> 
+                <li><a href="#colors" >CSS Colors</a></li>
+                <li><a href="#typography">CSS Typography</a></li>                 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- HTML  -->
+        <h1 id="html">HTML</h1>
 
+        <!-- HTML FUNDAMENTALS -->
+        <h2 id="htmlfundamentals">HTML Fundamentals</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>TAG</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;!DOCTYPE html&gt;</span></td>
+                    <td><span class="bold">Doctype</span></td>
+                    <td>In HTML, the doctype is the required "<span class="code">&lt;!DOCTYPE html&gt;</span>" preamble found at the top of all documents. Its sole purpose is to prevent a browser from switching into so-called "quirks mode" when rendering a document; that is, the "<span class="code">&lt;!DOCTYPE html&gt;</span>" doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;!-- --&gt;</span></td>
+                    <td>Just Comments</td>
+                    <td>You can add your own comments as a developer to developer. THis helps to navigate the site through the code and helps to make it organized</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;html&gt;</span></td>
+                    <td>The <span class="bold>">HTML</span> Document / Root element</td>
+                    <td>The <span class="code">&lt;html&gt;</span> HTML element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;head&gt;</span></td>
+                    <td>The Document Metadata (<span class="bold>">Head</span>er)  element</td>
+                    <td>The <span class="code">&lt;head&gt;</span> HTML element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.</td>
+                </tr>   
+                <tr class="pattern1">
+                    <td><span class="code">&lt;title&gt;</span></td>
+                    <td>The Document <span class="bold>">Title</span> element</td>
+                    <td>The <span class="code">&lt;title&gt;</span> HTML element defines the document's title that is shown in a browser's title bar or a page's tab. It only contains text; tags within the element are ignored.</td>
+                </tr>   
+                <tr class="pattern2">
+                    <td><span class="code">&lt;link&gt;</span></td>
+                    <td><span class="bold>">Link</span> element</td>
+                    <td>The <span class="code">&lt;link&gt;</span> HTML element specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</td>
+                </tr>  
+                <tr class="pattern1">
+                    <td><span class="code">&lt;body&gt;</span></td>
+                    <td>The Document <span class="bold>">Body</span> element</td>
+                    <td>The <span class="code">&lt;body&gt;</span> HTML element represents the content of an HTML document. There can be only one <body> element in a document.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;h1&gt;-&lt;h6&gt;</span></td>
+                    <td>The HTML Section Heading elements</td>
+                    <td>The <span class="code">&lt;h1&gt;</span> to <span class="code">&lt;h6&gt;</span> HTML elements represent six levels of section headings. <span class="code">&lt;h1&gt;</span> is the highest section level and <span class="code">&lt;h6&gt;</span> is the lowest. By default, all heading elements create a block-level box in the layout, starting on a new line and taking up the full width available in their containing block.</td>
+                </tr>         
+                <tr class="pattern1">
+                    <td><span class="code">&lt;div&gt;</span></td>
+                    <td>The Content <span class="bold">Div</span>ision element</td>
+                    <td>The <span class="code">&lt;div&gt;</span> HTML element is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS (e.g. styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;span&gt;</span></td>
+                    <td>The Content <span class="bold">Span</span> element</td>
+                    <td>The <span class="code">&lt;span&gt;</span> HTML element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span class="code">&lt;span&gt;</span> is very much like a <span class="code">&lt;div&gt;</span> element, but <span class="code">&lt;div&gt;</span> is a block-level element whereas a <span class="code">&lt;span&gt;</span> is an inline-level element.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;br&gt;</span></td>
+                    <td>The Line <span class="bold">Br</span>eak element</td>
+                    <td>The <span class="code">&lt;br&gt;</span> HTML element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;p&gt;</span></td>
+                    <td>The <span class="bold">P</span>aragraph element</td>
+                    <td>The <span class="code">&lt;p&gt;</span> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
+
+                    <p>Paragraphs are block-level elements, and notably will automatically close if another block-level element is parsed before the closing <span class="code">&lt;/p&gt;</span> tag. </p></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;ul&gt;</span></td>
+                    <td>The <span class="bold">U</span>nordered <span class="bold">L</span>ist Element</td>
+                    <td>The <span class="code">&lt;ul&gt;</span> HTML element represents an unordered list of items, typically rendered as a bulleted list.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;ol&gt;</span></td>
+                    <td>The <span class="bold">O</span>rdered <span class="bold">L</span>ist Element</td>
+                    <td>The <span class="code">&lt;ol&gt;</span> HTML element represents an ordered list of items, typically rendered as a numbered list.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;li&gt;</span></td>
+                    <td>The <span class="bold">Li</span>st Element</td>
+                    <td>The <span class="code">&lt;li&gt;</span> HTML element is used to represent an item in a list. It must be contained in a parent element: an ordered list (<span class="code">&lt;ol&gt;</span>), an unordered list (<span class="code">&lt;ul&gt;</span>), or a menu (<span class="code">&lt;menu&gt;</span>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;em&gt;</span></td>
+                    <td>The <span class="bold">Em</span>phasis Element</td>
+                    <td>The <span class="code">&lt;em&gt;</span> HTML element marks text that has stress emphasis. The <span class="code">&lt;em&gt;</span> element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;strong&gt;</span></td>
+                    <td>The <span class="bold">Strong</span> Importance Element</td>
+                    <td>The <span class="code">&lt;strong&gt;</span> HTML element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;img&gt;</span></td>
+                    <td>The <span class="bold">Image</span> Embed Element</td>
+                    <td>The <span class="code">&lt;img&gt;</span> HTML element embeds an image into the document.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;video&gt;</span></td>
+                    <td>The <span class="bold">Video</span> Embed Element</td>
+                    <td>The <span class="code">&lt;video&gt;</span> HTML element embeds a media player which supports video playback into the document. You can use <span class="code">&lt;video&gt;</span> for audio content as well, but the <span class="code">&lt;audio&gt;</span> element may provide a more appropriate user experience.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;audio&gt;</span></td>
+                    <td>The <span class="bold">Audio</span> Embed Element</td>
+                    <td>The <span class="code">&lt;audio&gt;</span> HTML element is used to embed sound content in documents. It may contain one or more audio sources, represented using the <span class="code">src</span> attribute or the <span class="code">&lt;source&gt;</span> element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a <span class="code">MediaStream</span>.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;a&gt;</span></td>
+                    <td>Hyperlink</td>
+                    <td>The <span class="code">&lt;a&gt;</span> SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's <span class="code">&lt;a&gt;</span> element.
+
+                    <p>SVG's <span class="code">&lt;a&gt;</span> element is a container, which means you can create a link around text (like in HTML) but also around any shape.</p></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML ATTRIBUTES-->
+
+        <h2>HTML Attributes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ATTRIBUTE</th>
+                    <th>TAG</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+                <tr class="pattern1">
+                    <td><span class="code">style</span></td>
+                    <td>ANY TAG</td>
+                    <td>The <span class="code">style</span> attribute allows to style an element using CSS declarations.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">id</span></td>
+                    <td>ANY TAG</td>
+                    <td>The <span class="code">id</span> global attribute defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">class</span></td>
+                    <td>ANY TAG</td>
+                    <td>Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
+
+                    <p>An element's class name serves two key roles:</p>
+                        
+                    <ul>
+                        <li>As a style sheet selector, for when an author assigns style information to a set of elements.</li>
+                        <li>For general use by the browser.</li>
+                    </ul>
+                    </td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">controls</span></td>
+                    <td><span class="code">&lt;video&gt;</span></td>
+                    <td>If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">src</span></td>
+                    <td><span class="code">&lt;img&gt;</span></td>
+                    <td>The <span class="code">src</span> attribute is required, and contains the path to the image you want to embed.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">alt</span></td>
+                    <td><span class="code">&lt;img&gt;</span></td>
+                    <td>The <span class="code">alt</span> attribute holds a textual replacement for the image, which is mandatory and <spam class="bold"> incredibly useful</spam> for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">href</span></td>
+                    <td><span class="code">&lt;a&gt; &lt;link&gt;</span></td>
+                    <td>The URL or URL fragment the hyperlink points to.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">rel</span></td>
+                    <td><span class="code">&lt;a&gt; &lt;link&gt; &lt;area&gt; &lt;form&gt;</span></td>
+                    <td>The rel attribute defines the relationship between a linked resource and the current document. Valid on &lt;a&gt; &lt;link&gt; &lt;area&gt; and &lt;form&gt;, the supported values depend on the element on which the attribute is found.
+                     <p>The type of relationships is given by the value of the <span class="code">rel</span> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a <span class="code">class</span> name, which does not express semantics, the <span class="code">rel</span> attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the <span class="code">rel</span> attribute are the IANA link relation registry, the HTML Living Standard, and the freely-editable existing-rel-values page in the microformats wiki, as suggested by the Living Standard. If a <span class="code">rel</span> attribute not present in one of the three sources above is used some HTML validators (such as the W3C Markup Validation Service) will generate a warning.</p>
+                     <p>The following table lists some of the most important existing keywords. Every keyword within a space-separated value should be unique within that value.</p></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">target</span></td>
+                    <td><span class="code">&lt;a&gt;</span></td>
+                    <td>Where to display the linked URL. Value type: <span class="code">_self|_parent|_top|_blank</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML TABLES-->
+        
+        <h2 id="tables">HTML Tables</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>TAG</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pattern1">
+                    <td class="pattern1"><span class="code">&lt;table&gt;</span></td>
+                    <td><span class="bold">Table</span></td>
+                    <td>The wrapper element for all HTML tables.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;thead&gt;</span></td>
+                    <td><span class="bold">T</span>able <span class="bold">Head</span>
+                    </td>
+                    <td>The set of rows defining the column headers in a table.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;tbody&gt;</span></td>
+                    <td><span class="bold">T</span>able <span class="bold">B</span>ody</td>
+                    <td>The set of rows containing actual table data.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;tr&gt;</span></td>
+                    <td><span class="bold">T</span>able <span class="bold">R</span>ow</td>
+                    <td>The table row container.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;td&gt;</span></td>
+                    <td><span class="bold">T</span>able <span class="bold">D</span>ata</td>
+                    <td>The table row container.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;tfoot&gt;</span></td>
+                    <td><span class="bold">T</span>able <span class="bold">Foot</span></td>
+                    <td>The set of rows defining the footer in a table.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML ATTRIBUTES-->
+
+        <h2>Table Attributes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ATTRIBUTE</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+                <tr  class="pattern1">
+                    <td><span class="code">colspan</span></td>
+                    <td><span class="bold">Col</span>umn <span class="bold">Span</span></td>
+                    <td>Defines how many columns a td element should span.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">rowspan</span></td>
+                    <td><span class="bold">Row Span</span></td>
+                    <td>Defines how many rows a td element should span.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML SEMANTIC-->
+        
+        <h2 id="semantic">HTML Semantic</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>TAG</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;header&gt;</span></td>
+                    <td><span class="bold">Header</span></td>
+                    <td>The <span class="code">&lt;header&gt;</span> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements
+                    <p> The <span class="code">&lt;header&gt;</span> element has an identical meaning to the site-wide <span class="code">banner</span> landmark role, unless nested within sectioning content. Then, the <span class="code">&lt;header&gt;</span> element is not a landmark.</p>
+                    <p>The <span class="code">&lt;header&gt;</span> element can define a global site header, described as a <span class="code">banner</span> in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+                    </p></td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;nav&gt;</span></td>
+                    <td>The <span class="bold">Nav</span>igation Section element
+                    </td>
+                    <td>The <span class="code">&lt;nav&gt;</span> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;main&gt;</span></td>
+                    <td><span class="bold">Main</span> page</td>
+                    <td>The <span class="code">&lt;main&gt;</span> HTML element represents the dominant content of the <span class="code">&lt;body&gt;</span> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;footer&gt;</span></td>
+                    <td>Bottom of the page</td>
+                    <td>The <span class="code">&lt;footer&gt;</span> HTML element represents a footer for its nearest ancestor sectioning content or sectioning root element. A <span class="code">&lt;footer&gt;</span> typically contains information about the author of the section, copyright data or links to related documents.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;embed&gt;</span></td>
+                    <td>The <span class="bold">Embed</span> External Content element</td>
+                    <td>The <span class="code">&lt;embed&gt;</span> HTML element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
+                    <p> Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon <span class="code">&lt;embed&gt;</span> is generally not wise if you want your site to be operable on the average user's browser.
+                    </p></td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;figure&gt;</span></td>
+                    <td>The <span class="bold">Figure</span> with Optional Caption element</td>
+                    <td>The <span class="code">&lt;figure&gt;</span> HTML element represents self-contained content, potentially with an optional caption, which is specified using the <span class="code">&lt;figcaption&gt;</span> element. The figure, its caption, and its contents are referenced as a single unit.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;figcaption&gt;</span></td>
+                    <td>The <span class="bold">Figure</span> Caption element</td>
+                    <td>The <span class="code">&lt;figcaption&gt;</span> HTML element represents a caption or legend describing the rest of the contents of its parent <span class="code">&lt;figure&gt;</span> element.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;section&gt;</span></td>
+                    <td> The Generic <span class="bold">Section</span> element</td>
+                    <td>The <span class="code">&lt;section&gt;</span> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
+                    <p> As an example, a navigation menu should be wrapped in a <span class="code">&lt;nav&gt;</span> element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a <span class="code">&lt;section&gt;</span>.
+                    </p></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;article&gt;</span></td>
+                    <td>The <span class="bold">Article</span> contents element</td>
+                    <td>The <span class="code">&lt;article&gt;</span> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+                    <p>A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an <span class="code">&lt;article&gt;</span> element, possibly with one or more <span class="code">&lt;section&gt;</span>s within.</p></td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">&lt;aside&gt;</span></td>
+                    <td>The <span class="bold">Aside</span> element</td>
+                    <td>The <span class="code">&lt;aside&gt;</span> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
+                    <p>Do not use the <span class="code">&lt;aside&gt;</span> element to tag parenthesized text, as this kind of text is considered part of the main flow
+                    </p></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- CSS FUNDAMENTALS-->
+        
+        <h1 id="css">CSS</h1>
+        <h2 id="cssfundamentals">Fundamentals: Selectors and Attributes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SELECTOR/INSTANCE</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pattern1">
+                    <td><span class="code">h1 - h6 | p | div | span</span></td>
+                    <td>CSS Type Selectors</td>
+                    <td>CSS type selectors are used to match all elements of a given type or tag name. Unlike for HTML syntax, we do not include the angle bracket when using type selectors for tag names. When using type selectors, elements are matched regardless of their nesting level in the HTML.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">h1 { color: blue; text-align: center; } </span></td>
+                    <td>CSS Rule Sets</td>
+                    <td>A CSS rule set contains one or more selectors and one or more declaration. The selectors(s), which in this example is <span class="code">h1</span>, points to an HTML element. The declaration(s), which in this example are <span class="code">color: blue</span> and <span class="code">text-align: center</span> style the element with a property and value. The rule set is the main building block of a CSS sheet.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">h1, h2 { color:red; }</span></td>
+                    <td>Group of CSS Selectors</td>
+                    <td>Match mulitple selectors to the same CSS rule, using a comma-separated list. In this example, the text for both h1 and h2 is set to red</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">h3.section-heading { color: blue; }</span></td>
+                    <td>Chaining Selectors</td>
+                    <td>CSS selectors can be chained so that rule sets apply only to elements that match all criteria. For instance, to select &lt;h3&gt; elements that also have the <span class="code">section-heading</span> class, the selector <span class="code">h3.selection-heading</span> can be used.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">#id { color: #2a2aff; }</span></td>
+                    <td><span class="bold">ID</span> Selectors</td>
+                    <td>CSS ID selectors should be unique and used to style only a single element. ID selectors are denoted with a hash sign <span class="code">#</span> followed by the id name.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">.calendar-cell { color: #fff }</span></td>
+                    <td>CSS class selectors</td>
+                    <td>The CSS class selector matches elements based on the contents of their <span class="code">class</span> attribute. For selecting elements having <span class="code">calender-cell</span> as the value of the <span class="code">class</span> attribute, a <span class="code">.</span> needs to be prepended.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">&lt;div class="value1 value2 value3"&gt;&lt;/div&gt;</span></td>
+                    <td>HTML attributes with multiple values</td>
+                    <td>Some HTML attributes can have multiple attribute values. Multiple attribute values are separated by a space between each attribute</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">h1#header { color: blue; } <br>h1 { color: red; }</span></td>
+                    <td>Selector Specificity</td>
+                    <td>Specificity is a ranking system that is used when there are mutiple conflicting property values that point to the same element. When determining which rule to apply, the selector with the highest specificity wins out. The most specific selector type is the ID selector, followed by type selectors. In this example, only <span class="code">color: blue</span> will be implemented as it has an ID selector whereas <span class="code">color: red</span> has a type selector.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">div p { } <br>section ol li { }</span></td>
+                    <td>CSS descendant selector</td>
+                    <td>The CSS descendant selector combinator is used to match elements that are descended from another matched selector. They are denoted by a single space between each selector and the descended selector. All matching elements are selected regardless of the nesting level in the HTML.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">text-align: center; <br>color: purple; <br>width: 100px;</span></td>
+                    <td>CSS Declaration</td>
+                    <td>In CSS, a declaration is the key-value pair of a CSS property and its value. CSS declarations are used to set style properties and construct rules to apply to individual or groups of elements. The property name and value are separated by a colon, and the entire declaration must be terminated by a semi-colon.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">p { color: #2a2aff; }<br>span { color: green; }</span></td>
+                    <td>Setting foreground text color in CSS</td>
+                    <td>Using the <span class="code">color</span> property, foreground text color on an element can be set in CSS. The value can be valid color name supported in CSS like <span class="code">green</span> or <span class="code">blue</span>. Also, 3 digit or 6 digit color code like <span class="code">#22f</span> or <span class="code">#2a2aff</span> can be used to set the color.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">h1 { color: aqua; }<br>li { color: khaki; }</span></td>
+                    <td>Color Name keywords</td>
+                    <td>Color name keywords can be used to set the color propertyvalue for elements in CSS</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">background-color: blue;</span></td>
+                    <td>Background Color</td>
+                    <td>The <span class="code">background-color</span> CSS property controls the background color of elements.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">.column-one { width: 200px <span class="bold">!important</span> }<br>.column-one { width:100px }</span></td>
+                    <td><span class="code">!important</span></td>
+                    <td>The CSS <span class="code">!important</span> rule is used on declarations to override any other declarations for a property and ignore selector specificity. <span class="code">!important</span> rules will ensure that a specific declaration always applies to the matched elements. However, generally it is good to avoid using <span class="code">!important</span> as bad practice.</td>
+                </tr>
+                <tr class="pattern1" class="pattern1">
+                    <td><span class="code">opacity: 0.5;</span></td>
+                    <td>Opacity</td>
+                    <td>The <span class="code">opacity</span> CSS property can be used to control the transparency of an element. The value of this property rages from <span class="code">0</span> (transparent) to <span class="code">1</span> (opaque).</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">font-weight: bold</span></td>
+                    <td>Font Weight</td>
+                    <td>The <span class="code">font-weight</span> CSS property can be used to set the wieght (boldness) of text. The provided value can be a keyword as <span class="code">bold</span> or <span class="code">normal</span></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">font-size: 30px</span></td>
+                    <td>Font Size</td>
+                    <td>The <span class="code">font-size</span> CSS property is used to set text sizes. Font size values can be many different units or types such as pixels</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">h2 { font-family: Verdana; }<br>#page-title { font-family: "Courier New"; }</span></td>
+                    <td>Font Family</td>
+                    <td>The <span class="code">font-family</span> CSS property is used to specify the typeface in the a rule set. Fonts must be available to the browser to display correctly, either on the computer or linked as a web font. If a font value is not available, browsers will display their default font. When using a multi-word font name, it is best practice to wrap them in quotes.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">text-align: right;</span></td>
+                    <td>Text Align</td>
+                    <td>The <span class="code">text-align</span> CSS property can be used to set the text alignment of inline contents. This property can be set to these values: <span class="code">left</span>, <span class="code">right</span> or <span class="code">center</span></td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">background-image: url("../resources/image.png");</span></td>
+                    <td>Resource URLs</td>
+                    <td>In CSS, the <span class="code">url()</span> function is used to wroap resource URLs. These can be applied to several properties such as the <span class="code">background-image</span> or <span class="code">center</span></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">background-image: url("nyan-cat.gif");</span></td>
+                    <td>Background Image</td>
+                    <td>The <span class="code">background-image</span> CSS property sets the background image of an element. An image URL should be provided in the syntax <span class="code">url("moon.jpg")</span> as the value of the property.</td>
+                </tr>
+            </tbody>
+            </table>
+
+        <!-- CSS BOX MODEL-->
+        
+        <h2 id="boxmodel">CSS Box Model</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SELECTOR/INSTANCE</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pattern1">
+                    <td><span class="code">.block-one { margin: 30px; }<br>.block-two { margin: 30px; } </span></td>
+                    <td>CSS Margin Collapse</td>
+                    <td>CSS margin collapse occurs when the top and bottom margins of blocks are combined into single margin equal to the largest individual block margin.
+                    <p>
+                    Margin collapse only occurs with vertical margins, not for horizontal margins.
+                    </p>
+                    </td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">div { margin: auto; }</span></td>
+                    <td>CSS <span class="code">auto</span> Keyword</td>
+                    <td>The value <span class="code">auto</span> can be used with the property <span class="code">margin</span> to horizontally center an element within its container. The <span class="code">margin</span> property will take the width of the element and will split the rest of the space equally between the left and right margins.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">small-block { overflow: scroll; }</span></td>
+                    <td>Dealing with <span class="code">overflow</span></td>
+                    <td>If content is too large for its container, the CSS <span class="code">overflow</span> property will determine how the browser handles the problem.
+                    <p>By default, it will be set to <span class="code">visible</span>and the content will take up extra space. It can also be set to <span class="code">hidden</span>, or a <span class="code">scroll</span>, which will make the overflowing content accessible via scroll bars within the original container.</p></td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">.column { max-width: 200px; width: 500px; }</span></td>
+                    <td>Height and Width, Maximums/Minimums</td>
+                    <td>The CSS <span class="code">min-width</span> and <span class="code">min-height</span> properties can be used to set a minimum width and minimum height of an elelement's box. CSS <span class="code">max-width</span> and <span class="code">max-height</span> properties can be used to set maximum widths and heights for elelements boxes.</td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">.invisible-elements { visibility: hidden; }</span></td>
+                    <td>The <span class="code">visibility</span> Property</td>
+                    <td>The CSS <span class="code">visibility</span> property is used to render <span class="code">hidden</span> objects invisible to the user, without removing them from the page. This ensures that the page structure and organization remain unchanged.</td>
+                </tr>
+                <tr class="pattern2">
+                    <td><span class="code">.container { box-sizing: border-box; }</span></td>
+                    <td>The property <span class="code">box-sizing</span> of the CSS box model</td>
+                    <td>The CSS box model is a box that wraps around an HTML element and cotrols the design and layout. The property <span class="code">box-sizing</span> controls which aspect of the box is determined by the <span class="code">height</span> and <span class="code">width</span> properties.
+                    <p> The default value of this property is <span class="code">content-box</span>, which renders tha actual size of the element <span class="bold">including the content box; but not the paddings and borders</span>. The value <span class="code">border-box</span>, on the other hand, renders the actual size of an element <span class="bold">including the content box, paddings, and borders</span></td>
+                </tr>
+                <tr class="pattern1">
+                    <td><span class="code">#box-example { box-sizing: border-box; }</span></td>
+                    <td>CSS <span class="code">box-sizing: border-box</span></td>
+                    <td>The value <span class="code">border-box</span> of the <span class="code">box-sizing</span> property for an element corresponds directly to the element's total rendered size, including padding and border with the <span class="code">height</span> and <span class="code">width</span> properties.
+                    <p>The default value of the <span class="code">box-sizing</span> property is <span class="code">content box</span>. The value <span class="code">border-box</span> is recommended when it is necessary to resize the <span class="code">padding</span> and <span class="code">border</span> but not just the content. For instance, the value <span class="code">border-box</span> calculates an element's <span class="code">height</span> as follows:<span class="code">height = content height + padding + border</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+         <!-- CSS DISPLAY AND POSITIONING-->
+        
+         <h2 id="display">CSS Display and Positioning</h2>
+         <table>
+             <thead>
+                 <tr>
+                     <th>SELECTOR/INSTANCE</th>
+                     <th>NAME</th>
+                     <th>DESCRIPTION</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr class="pattern1">
+                     <td><span class="code">.element1 { position: absolute; z-index: 1; }<br>.element2 { position: absolute; z-index: -1; }</span></td>
+                     <td>CSS <span class="code">z-index</span> Property</td>
+                     <td>CSS <span class="code">z-index</span> property specifies how far back or how far forward an element will appear on a web page when it overlaps other elements.
+                     <p>The <span class="code">z-index</span> property uses integer values, which can be positive or negative values. The element with the highest <span class="code">z-index</span> value will be at the foreground, while the element with the lowest <span class="code">z-index</span> value will be at the back.</p>
+                     </td>
+                 </tr>
+                 <tr class="pattern2">
+                     <td><span class="code">#navbar { position: fixed; }</span></td>
+                     <td>Fixed CSS Positioning</td>
+                     <td>Positioning in CSS provides designers and developers options for positioning HTML elements on a web page. The CSS <span class="code">position</span> can be set to <span class="code">static</span>, <span class="code">absolute</span> or <span class="code">fixed</span>. When the CSS position has a value of <span class="code">fixed</span>, it is set/pinned to a specific spot on a page. The fixed element stays the same regardless of scrolling. The navigation bar is a great example of an element that is often set to <span class="code">position: fixed;</span>, enabling the user to scroll through the web page and still access the navigation bar.</td>
+                 </tr>
+                 <tr class="pattern1">
+                     <td><span class="code">.container1 { display: block; }<br>.container2 { display: inline; }<br>.container3 { display: inline-block; }</span></td>
+                     <td>CSS <span class="code">display</span> Property</td>
+                     <td>The CSS <span class="code">display</span> property determines the type of render block for an element. The most common values for this property are <span class="code">block</span>, <span class="code">inline</span>, and <span class="code">inline-block</span>. 
+                    <p>Block-level elements take up the full width of their container with line breaks before and after, and can have thier height and width manually adjusted.</p>
+                    <p>Inline elements take up as little space as possible, flow horizontally, and cannot have their width or height manually adjusted.</p>
+                    <p>Inline-block elements can appear next to each other, and can have their width and height manually adjusted.</p></td>
+                 </tr>
+                 <tr class="pattern2">
+                     <td><span class="code">.element { position: absolute; }</span></td>
+                     <td>CSS <span class="code">position: absolute</span></td>
+                     <td>The value <span class="code">absolute</span> for the CSS property <span class="code">position</span> enables an element to ignore sibling elements and instead be positioned relative to its closest parent element that is positioned with <span class="code">relative</span> or <span class="code">absolute</span>. The <span class="code">absolute</span> value removes an element entirely from the document flow. By using the positioning attributes <span class="code">top</span>, <span class="code">left</span>, <span class="code">bottom</span>, or <span class="code">right</span>, an element can be positioned anywhere as expected.</td>
+                 </tr>
+                 <tr class="pattern1">
+                     <td><span class="code">.element { position: relative; }</span></td>
+                     <td>The <span class="code">position: relative</span> Property</td>
+                     <td>The value <span class="code">relative</span> of the CSS  <span class="code">position</span> property enables an element to be positioned relative to where it would have originally been on a web page. The offset properies can be used to determine the actual position of the element relative to its original position. Without the offset properties, this declaration will have no effect on its positioning. It will act as the default value <span class="code">static</span> of the <span class="code">position</span> property.</td>
+                 </tr>
+                 <tr class="pattern2">
+                     <td><span class="code">.left { float: left; }<br>.right { float: right; }</span></td>
+                     <td>CSS <span class="code">float</span> property</td>
+                     <td>The CSS <span class="code">float</span> property determines how far left or how far right an element should float within its parent element. The value <span class="code">left</span> floats an element to the left side of its container and value <span class="code">right</span> floats and element to the right side of its container. For the property <span class="code">float</span>, the <span class="code">width</span> of the container must be specified or the element will assume the full width of its containing element.</td>
+                 </tr>
+                 <tr class="pattern1">
+                     <td><span class="code">.element { clear: left; }<br>.element { clear: right; }<br>.element { clear: both; }<br>.element { clear: none; }</span></td>
+                     <td>The CSS <span class="code">clear</span> property</td>
+                     <td>The CSS <span class="code">clear</span> property specifies how an element should behave when it bumps into another element within the same containing element. The <span class="code">clear</span> is usually used in combination with elements having the CSS <span class="code">float</span> property. This determines on which sides floating elements are allowed to float.</td>
+                 </tr>
+             </tbody>
+         </table>
+
+          <!-- CSS IMPROVED COLORS-->
+        
+          <h2 id="colors">CSS Improved Colors</h2>
+          
+          <table>
+              <thead>
+                  <tr>
+                      <th>SELECTOR/INSTANCE</th>
+                      <th>NAME</th>
+                      <th>DESCRIPTION</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="pattern1">
+                      <td><span class="code">h1 { color: aqua; }<br>li { color: khaki; }</span></td>
+                      <td>Color Name Keywords</td>
+                      <td>Color name keywords can be used to set color property values for elements in CSS.
+                      </td>
+                  </tr>
+                  <tr class="pattern2">
+                      <td><span class="code">.midground { background-color: rgba (0, 255, 0, 0.5); }<br>.foreground { background-color: hsla (34, 100%, 50%, 0.1) }<br>.transparent { color:transparent; } </span></td>
+                      <td>CSS Color Alpha Values</td>
+                      <td>Alpha values determine the tranparency of colors in CSS. Alpha values can be set for both RGB and HSL colors by using <span class="code">rgba()</span> and <span class="code">hsla()</span> and providing a fourth value representing alpha. Alpha values can range between <span class="code">0.0</span> (totally transparent) and <span class="code">1.0</span> (totally opaque).
+                      <p>The CSS <span class="code">transparent</span> value can also be used to create a fully transparent elelement.</p></td>
+                  </tr>
+                  <tr class="pattern1">
+                      <td><span class="code">.red { color: #ff0000; }<br>.short-blue { color: #00f; }</span></td>
+                      <td>CSS Hexadecimal Colors</td>
+                      <td>CSS colors can be presented in hexadecimal (or hex) notation. Hexadecimal digits can represent sixteen different values using <span class="code">0-9</span> and <span class="code">a-f</span>.
+                      <p>Hexadecimal colors are composed of 6 characters - each group of two represents a value between 0 and 255 for red, green, or blue. For example <span class="code">#ff0000</span> is all red, no green, and no blue.</p> 
+                      <p>When both characters of all three colors are repeated, hex colors can be abbreviated to only three values, so <span class="code">#0000ff</span> could also be represented as <span class="code">#00f</span></p></td>
+                  </tr>
+                  <tr class="pattern2">
+                      <td><span class="code">.light-blue { backgrouond-color: hsl(200, 70%, 50%); }</span></td>
+                      <td>CSS HSL Colors</td>
+                      <td>CSS color can be decalred with the HSL color system using <span class="code">hsl()</span> syntax. THis syntax contains three values: hue (the color value itself), satyrdation (intensity), and lightness
+                      <p>Hue values range from 0 to 360 while saturation and lightness values are represented as percentages.</p></td>
+                  </tr>
+                  <tr class="pattern1">
+                      <td><span class="code">.hot-pink { color: rgb(249, 2, 171); }<br>.green { color: rgb(0, 255, 0); }</span></td>
+                      <td>CSS rgb() Colors</td>
+                      <td>CSS colors can be declared with RGB colors using <span class="code">rgb()</span> syntax.
+                      <p><span class="code">rgb()</span> should be supplied with three values representing red, greenn and blue. These values can range from 0 to 255.</p></td>
+                  </tr>
+                  
+              </tbody>
+          </table>
+
+          <!-- CSS TYPOGRAPHY-->
+        
+          <h2 id="typography">CSS Typography</h2>
+          <table>
+              <thead>
+                  <tr>
+                      <th>SELECTOR/INSTANCE</th>
+                      <th>NAME</th>
+                      <th>DESCRIPTION</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="pattern1">
+                      <td><span class="code">p { font-weight: 700; }</span></td>
+                      <td>CSS <span class="code">font-weight</span> Property</td>
+                      <td>The CSS <span class="code">font-weight</span> property declares how thick or thin should be the characters of a text. Numerical values can be used with this property to set the thickness of the text. The numeric scale range of this property is from 100 to 900 and accepts only multiples of 100. The default value is <span class="code">normal</span> while the default numerical value is <span class="code">400</span>. Any value less than <span class="code">400</span> will have text appear lighter than the default while any numerical value greater than the <span class="code">400</span> will appear bolder.
+                      <p>In the given example, all the <span class="code">&lt;p&gt;</span> elements will appear in a bolder font.</p></td>
+                  </tr>
+                  <tr class="pattern2">
+                      <td><span class="code">.text { font-style: italic; } </span></td>
+                      <td><span class="code">font-style</span></td>
+                      <td>The CSS <span class="code">font-style</span> property determines the font style in which text will appear.
+                      <p>It accepts <span class="code">italic</span> as value to set the font style to italic</p></td>
+                  </tr>
+                  <tr class="pattern1">
+                      <td><span class="code">@font-face { font-family: 'Glegoo'; src: url('../fonts/Glegoo-Regular.ttf') format('truetype') }</span></td>
+                      <td>CSS <span class="code">@font-face</span> rule</td>
+                      <td>CSS <span class="code">@font-face</span> rule allows external fonts or font files to be imported directly into stylesheets. The location of the font file must be specified in the CSS rule so that the files can be loaded from that location.
+                      <p>This rule also allows for a locally hosted fonts to be added using a relative path instead of a web URL.</p></td>
+                  </tr>
+                  <tr class="pattern2">
+                      <td><span class="code">.p { font-family: "Helvetica", "Arial"; }</span></td>
+                      <td>CSS Fallback Fonts</td>
+                      <td>The CSS <span class="code">font-family</span> property can have multiple fonts declared in order of preference. In this case the fonts following the initial font are known as the fallback fonts.
+                      <p>If the initial value of the property <span class="code">font-family</span> fails to load to the webpage, the fallback fonts will be used.</p></td>
+                  </tr>
+                  <tr class="pattern1">
+                      <td><span class="code">.p { line-height: 10px }</span></td>
+                      <td>The CSS <span class="code">line-height</span> property</td>
+                      <td>The CSS <span class="code">line-height</span> property declares the vertical spacing between line of text.
+                      <p>It accepts both unitless numbers as a ratio (e.g.<span class="code">2</span>) and numbers specified by unit as values (e.g.<span class="code">12px</span>) but it does not accept negative numbers.</p>
+                      <p>A unitless number is an absolute value that will compute the line height as a ratio to the font size and a unit number can be any valid CSS unit (e.g. pixels, percents, ems, rems, etc.). To set the <span class="code">line-height</span> of the <span class="code">&lt;p&gt;</span> elements to <span class="code">10px</span>, the given CSS declaration can be used.</p>
+                    </td>
+                    <tr class="pattern2">
+                        <td><span class="code">&lt;head&gt;<br>&lt;link href="https://fonts.googleapis.com/css?family=Droid%Serif" rel="stylesheet"&gt;<br> &lt;/head&gt;</span></td>
+                        <td>CSS Linking fonts</td>
+                        <td>Linking fonts allow user to use web fonts in the document. They can be imported in an HTML document by using <span class="code">&lt;link&gt;</span> tag. Once the web font URL is placed within the <span class="code">href</span> attribute, the imported font can then be used in CSS declaration.
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+    </main>
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+
+</body>
 </html>
